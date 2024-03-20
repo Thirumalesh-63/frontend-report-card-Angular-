@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Exams</h2>
+  <button mat-raised-button (click)="addData()" class="demo-button">
+    Add Exams
+  </button>
+  <div class="table-pagination">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="text-center">Exam Id</th>
+          <th class="text-center">Exam Name</th>
+          <th class="text-center">Exam Date</th>
+          <th class="text-center">Total Marks</th>
+          <th class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let exam of exams">
+          <td class="text-center">{{ exam.examId }}</td>
+          <td class="text-center">{{ exam.examName }}</td>
+          <td class="text-center">{{ exam.examDate }}</td>
+          <td class="text-center">{{ exam.totalMarks }}</td>
+          <td class="text-center">
+            <button class="btn btn-primary" (click)="editExam(exam)">Edit</button>
+            <span style="margin-right: 20px;"></span>
+            <button class="btn btn-danger" (click)="deleteExam(exam.examName)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <mat-paginator [length]="totalItems" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="onPageChange()"></mat-paginator>
+  </div>
+</div>

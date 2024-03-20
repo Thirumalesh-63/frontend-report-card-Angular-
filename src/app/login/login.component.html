@@ -1,0 +1,20 @@
+<!--write html code for login form with email and password fields and a submit button in a mat-card-->
+
+<header>
+  <app-header></app-header>
+</header>
+<mat-card>
+  <mat-card-title>Login</mat-card-title>
+  <mat-card-content>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+      <mat-form-field>
+        <input matInput placeholder="Email" name="email" ngModel required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Password" name="password" ngModel required [type]="passwordVisible ? 'text' : 'password'">
+        <mat-icon matSuffix (click)="togglePasswordVisibility()">{{ passwordVisible ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Login</button>
+    </form>
+  </mat-card-content>
+</mat-card>

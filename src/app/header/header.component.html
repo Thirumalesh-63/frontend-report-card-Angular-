@@ -1,0 +1,15 @@
+<mat-toolbar>
+  <div class="left-side">
+    <img src="assets/report-card.png" alt="Report Card">
+    <span>Student Report</span>
+  </div>
+
+  <div class="right-side">
+    <!-- Show "Login" and "Register" buttons if user is not logged in -->
+    <span mat-button *ngIf="!isloggedin" routerLink="/login">Login</span>
+    <span mat-button *ngIf="!isloggedin" routerLink="/signup">Register</span>
+
+    <!-- Show "Logout" button if user is logged in -->
+    <span mat-button *ngIf="isloggedin" (click)="logout()">Logout</span>
+  </div>
+</mat-toolbar>

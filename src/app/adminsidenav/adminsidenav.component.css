@@ -1,0 +1,49 @@
+/* Icon spacing */
+.icon-spacing {
+  margin-right: 8px;
+}
+
+/* Button text */
+.button-text {
+  margin-top: -2px;
+}
+
+/* Side nav button container */
+.side-nav-button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+}
+
+  /* Side nav button icon */
+  .side-nav-button .mat-icon {
+    padding-right: 1.5rem;
+    margin-right: 0rem;
+    border-right: 0.4rem;
+  }
+
+/* Hover effect for mat-list-item */
+.mat-list-item:hover .mat-list-text {
+  background-color: #1f2937;
+  transition-duration: 0.3s;
+  color: white;
+  transform: translateY(-2px) scale(1.010);
+}
+
+/* Hover effect for mat-raised-button */
+.mat-raised-button:hover {
+  background-color: transparent;
+  color: inherit;
+  box-shadow: none;
+  transform: translateY(-2px) scale(1.010);
+}
+
+/* Active state for buttons */
+button.active, button.active .mat-icon {
+  background-color: #1f2937;
+  transition-duration: 1s;
+  color: white;
+}

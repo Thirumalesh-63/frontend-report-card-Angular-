@@ -1,0 +1,54 @@
+/* Header Component Styles */
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2937;; /* Change to your desired background color */
+  color: white; /* Change to your desired text color */
+  height: 64px; /* Adjust the height as needed */
+  padding: 0 16px; /* Adjust the padding as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+img {
+  height: 40px; /* Adjust the height of the image as needed */
+  margin-right: 10px; /* Add some margin to the right of the image */
+  border-radius: 50%; /* Make the image border round */
+}
+
+span {
+  font-size: 18px; /* Adjust the font size of the text */
+  cursor: pointer; /* Add a pointer cursor for better user experience */
+}
+
+  span:hover {
+    text-decoration: underline; /* Add underline on hover for better visual feedback */
+  }
+
+  /* Adjust styles for the mat-button spans */
+  span.mat-button {
+    padding: 8px 16px; /* Add padding to mat-button spans */
+    border-radius: 4px; /* Add border-radius for a slightly rounded appearance */
+    background-color: #007BFF; /* Change to your desired button background color */
+  }
+
+    span.mat-button:hover {
+      background-color: #0056b3; /* Change to your desired button background color on hover */
+    }
+
+/* Align right side */
+.mat-toolbar .right-side {
+  display: flex;
+  gap: 35px;
+}
+
+  /* Adjust styles for the right-side buttons */
+  .mat-toolbar .right-side span.mat-button {
+    margin-left: 8px;
+  }
+
+/* Adjust styles for the left-side content */
+.mat-toolbar .left-side {
+  display: flex;
+  align-items: center;
+}

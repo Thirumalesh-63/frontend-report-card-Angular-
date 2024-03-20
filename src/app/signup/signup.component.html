@@ -1,0 +1,25 @@
+<!--define a form for signup with the fields name,email,password,department with ngModel in a mat-card -->
+<header>
+  <app-header></app-header>
+</header>
+<mat-card>
+  <mat-card-title>Signup</mat-card-title>
+  <mat-card-content>
+    <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+      <mat-form-field>
+        <input matInput placeholder="Name" name="name" ngModel required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Email" name="email" ngModel required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Password" name="password" ngModel required [type]="passwordVisible ? 'text' : 'password'">
+        <mat-icon matSuffix (click)="togglePasswordVisibility()">{{ passwordVisible ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Department" name="department" ngModel required>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Signup</button>
+    </form>
+  </mat-card-content>
+</mat-card>

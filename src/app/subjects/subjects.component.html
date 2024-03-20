@@ -1,0 +1,48 @@
+<!-- write the html code by using bootstrap for a table which has columns subId, subName and for all the data edit and delete buttons should be there-->
+
+<div class="container">
+
+  <h2>Subjects</h2>
+
+  <button mat-raised-button (click)="addData()" class="demo-button">
+    Add Subjects
+  </button>
+
+  <table class="table">
+
+    <thead>
+
+      <tr>
+
+        <th class="text-center">Subject Id</th>
+
+        <th class="text-center">Subject Name</th>
+
+        <th class="text-center">Actions</th>
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let sub of subjects">
+
+        <td class="text-center">{{ sub.subId }}</td>
+
+        <td class="text-center">{{ sub.subName }}</td>
+        <td class="text-center">
+          <button class="btn btn-primary" (click)="editSubject(sub)">Edit</button>
+          <span style="margin-right: 20px;"></span> <!-- Add a span element with margin-right to create a gap -->
+          <button class="btn btn-danger" (click)="deleteSubject(sub.subName)">Delete</button>
+        </td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+  <mat-paginator [length]="totalItems" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="onPageChange()"></mat-paginator>
+ 
+</div>

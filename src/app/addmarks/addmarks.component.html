@@ -1,0 +1,42 @@
+<mat-card>
+  <mat-card-title>{{ isEditOperation ? 'Edit marks' : 'Add marks' }}</mat-card-title>
+  <mat-card-content>
+    <form #marksForm="ngForm" (ngSubmit)="onSubmit(marksForm)">
+      <mat-form-field>
+        <input matInput placeholder="Marks" name="marks"  ngModel required [(ngModel)]="marks2.marks">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Choose a User</mat-label>
+        <input matInput type="text" placeholder="User" [formControl]="userCtrl" [matAutocomplete]="auto" name="user" required [(ngModel)]="marks2.user.name">
+
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let user of filteredUsers | async" [value]="user">
+            {{ user }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Choose an Exam</mat-label>
+        <input matInput type="text" placeholder="Exam" [formControl]="examCtrl" [matAutocomplete]="auto1" name="exam"  required [(ngModel)]="marks2.exam.examName">
+        <mat-autocomplete #auto1="matAutocomplete">
+          <mat-option *ngFor="let exam of filteredExams | async" [value]="exam">
+            {{ exam }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Choose a Subject</mat-label>
+        <input matInput type="text" placeholder="Subject" [formControl]="subjectCtrl" [matAutocomplete]="auto2" name="subject"  required [(ngModel)]="marks2.sub.subName">
+        <mat-autocomplete #auto2="matAutocomplete">
+          <mat-option *ngFor="let subject of filteredSubjects | async" [value]="subject">
+            {{ subject }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">{{ isEditOperation ? 'Edit Marks' : 'Add Marks' }}</button>
+    </form>
+  </mat-card-content>
+</mat-card>

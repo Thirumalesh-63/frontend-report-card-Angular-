@@ -1,0 +1,43 @@
+<mat-card *ngIf="!isEditOperation">
+
+  <mat-card-title>Add Subject</mat-card-title>
+
+  <mat-card-content>
+
+    <form #subjectForm="ngForm" (ngSubmit)="onSubmit(subjectForm)">
+
+     <mat-form-field>
+ 
+         <input matInput placeholder="Subject Name" name="subname" ngModel required >
+
+       </mat-form-field>
+
+     <button mat-raised-button color="primary" type="submit">Add Subject</button>
+
+   </form>
+
+   </mat-card-content>
+
+ </mat-card>
+
+<mat-card *ngIf="isEditOperation">
+
+  <mat-card-title>Edit Subject</mat-card-title>
+
+  <mat-card-content>
+
+    <form #editSubjectForm="ngForm" (ngSubmit)="onEditSubmit(editSubjectForm)">
+
+     <mat-form-field>
+ 
+         <input matInput placeholder="Subject Name" name="subname" [(ngModel)]="sub.subName" required >
+
+       </mat-form-field>
+
+     <button mat-raised-button color="primary" type="submit">Save Changes</button>
+
+   </form>
+
+   </mat-card-content>
+
+ </mat-card>

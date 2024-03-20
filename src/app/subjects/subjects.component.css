@@ -1,0 +1,74 @@
+/* Styling for the container */
+.container {
+  margin-top: 20px; /* Add some top margin for spacing */
+}
+
+/* Styling for the "Add Subjects" button */
+.demo-button {
+  margin-bottom: 20px; /* Add bottom margin for spacing */
+}
+
+/* Styling for the table */
+.table {
+  width: 100%; /* Make the table fill its container */
+}
+
+  /* Styling for table header cells */
+  .table th {
+    font-weight: bold; /* Make header text bold */
+  }
+
+  /* Styling for table data cells */
+  .table td {
+    vertical-align: middle; /* Align cell content vertically in the middle */
+  }
+
+/* Styling for action buttons */
+.btn {
+  margin-right: 5px; /* Add margin to the right of buttons */
+}
+
+/* Styling for primary action button */
+.btn-primary {
+  background-color: #007bff; /* Set button background color to primary color */
+  border-color: #007bff; /* Set button border color to primary color */
+}
+
+/* Styling for danger action button */
+.btn-danger {
+  background-color: #dc3545; /* Set button background color to danger color */
+  border-color: #dc3545; /* Set button border color to danger color */
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+  opacity: 0.8; /* Reduce opacity on hover for a slight fade effect */
+}
+.container {
+  margin-top: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.demo-button {
+  margin-bottom: 10px;
+}
+
+.table {
+  width: 100%;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.btn-primary {
+  margin-right: 10px;
+}
+
+.btn-danger {
+  margin-right: 10px;
+}

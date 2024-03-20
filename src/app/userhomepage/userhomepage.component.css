@@ -1,0 +1,55 @@
+/* CSS for the container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* CSS for the table container */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* CSS for the mat-form-field */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* CSS for the table */
+table {
+  width: 100%;
+}
+
+/* CSS for the table header */
+th {
+  font-weight: bold;
+}
+
+/* CSS for the table cells */
+td {
+  padding: 8px;
+}
+
+/* CSS for the chart container */
+.chart-container {
+  width:60%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-inline-start: 200px;
+}
+
+/* CSS for the pie chart */
+.piechart {
+  width: 45%;
+}
+.bargraph {
+  height: 100%; /* or height: 400px; */
+  width: 100%;
+  margin-left: 100px;
+}
+
